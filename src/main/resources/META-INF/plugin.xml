@@ -1,0 +1,40 @@
+<idea-plugin>
+    <id>ua.com.vbychkovskyi.immutables.idea.plugin</id>
+    <name>Immutables idea plugin</name>
+    <version>1.0</version>
+    <vendor email="vbychkovskyy@gmail.com" url="http://vbychkovskyi.com.ua">Viacheslav Bychkovskyi</vendor>
+
+    <description><![CDATA[
+      Enter short description for your plugin here.<br>
+      <em>most HTML tags may be used</em>
+    ]]></description>
+
+    <change-notes><![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <action id="ua.com.vbychkovskyi.idea.GenerateImmutablesAction"
+                class="ua.com.vbychkovskyi.idea.GenerateImmutablesAction"
+                text="Immutables"
+                description="ua.com.vbychkovskyi.idea.GenerateImmutablesAction">
+            <add-to-group group-id="JavaGenerateGroup1" relative-to-action="GenerateConstructor" anchor="after"/>
+        </action>
+    </actions>
+
+</idea-plugin>
